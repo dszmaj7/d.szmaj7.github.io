@@ -1,0 +1,147 @@
+.banner {
+  width: 100%;
+  height: 1000px;
+  background-image: linear-gradient(0deg, #fbe389 0%, #f48b82 100%);
+  position: relative;
+  user-select: none;
+
+  &__eagle {
+    background-image: url("../../../assets/eagle.png");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 16px;
+  }
+
+  &__brand {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Montserrat";
+    z-index: 1;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(5, 100px) 50px 50px;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__menu-item {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+
+    & span:hover {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      color: #fce38a;
+    }
+
+    &:not(&--active) span:hover::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background-color: #fce38a;
+      bottom: -8px;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      animation: resize 0.2s forwards;
+    }
+  }
+
+  &__menu-item--active {
+    color: #fce38a;
+
+    & span {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      color: #fce38a;
+    }
+
+    & span::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 110%;
+      background-color: #fce38a;
+      bottom: -8px;
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  &__creative {
+    position: absolute;
+    font-size: 72px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Kaushan Script";
+    text-align: center;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__welcome {
+    position: absolute;
+    font-size: 150px;
+    line-height: 140px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__learn {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    border: 3px solid white;
+    padding: 8px 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Montserrat";
+    text-align: center;
+    left: 50%;
+    top: 74%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes resize {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 110%;
+  }
+}
