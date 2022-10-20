@@ -48,11 +48,16 @@
     ". content";
 
   &__icon {
+    cursor: pointer;
     grid-area: icon;
     margin-right: 20px;
     width: 32px;
     height: 32px;
     color: #95e1d3;
+
+    &:hover {
+      color: #f38181;
+    }
   }
 
   &__title {
