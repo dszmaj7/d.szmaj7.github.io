@@ -1,7 +1,7 @@
 {
   "name": "ui",
   "version": "0.1.0",
-  "homepage": "https://dszmaj7.github.io",
+  "homepage": "https://dszmaj7.github.io/ui",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
